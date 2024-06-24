@@ -40,22 +40,41 @@ Add default template
 ```jsx
 rcfe
 ```
-
-### Assets
-Logoipsum to get the placeholder for the logo
-public folder for assets
-copy paste svg there
-
 make sure your imports are from Next
 
+
+## Assets
+in folder '.public'
+### Logo: Logoipsum
+svg images for logo placeholders
+
+
+
 ## Authentication: Clerk
-Installation
+Installation, then follow other steps
 ```bash
 npm install @clerk/nextjs
 ```
 ### Set your environment variables
-In .env.local file, add these keys,retrieve these keys anytime from the API keys page.
-```
+In '.env.local' file, add these keys (retrieve these keys anytime from the API keys page).
+```py
+#to client side ui
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZnVuLW1vbGx5LTMuY2xlcmsuYWNjb3VudHMuZGV2JA
+
+#to nextjs server
 CLERK_SECRET_KEY=sk_test_qwMD0oh8oHbNK7d16t2Zf31mD3PNwYZnfhzqnTUoZ6
+```
+### Create middleware nextjs on server
+'middleware.ts' to enforce authentication: middleware that runs on nextjs server before rendering components to client (before any requests are completed)
+```ts
+//routes where authentication is needed for request to be completed
+const isProtectedRoute = createRouteMatcher([
+  '/dashboard',
+]);
+```
+connect button to a link
+```js
+<Link href = {'/sign-in'}>
+    <Button>Get Started</Button>
+</Link>
 ```
