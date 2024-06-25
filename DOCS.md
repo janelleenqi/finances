@@ -20,6 +20,7 @@ to install components like button
 npx shadcn-ui@latest add button
 ```
 - text-primary configured at tailwind.config.js
+- Icons: lucide-react is installed with shadcn
 
 ## Fonts: Import from Google Fonts
 to import the font "Inter", in layout.js
@@ -77,4 +78,10 @@ connect button to a link
 <Link href = {'/sign-in'}>
     <Button>Get Started</Button>
 </Link>
+```
+
+### useEffect
+Components that requires useEffect only works in a Client Component. So its parents need to be marked with "use client", else they're Server Components by default.
+```js
+"use client"
 ```
