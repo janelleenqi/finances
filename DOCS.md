@@ -85,3 +85,45 @@ Components that requires useEffect only works in a Client Component. So its pare
 ```js
 "use client"
 ```
+
+### components
+<div></div> vs <UserButton/>
+```js
+<div className='fixed bottom-10 p-5 flex gap-2 items-center'>
+  <UserButton/>Profile
+</div>
+```
+
+## Database: Postgres
+- Drizzle ORM & PostgreSQL
+- database is serverless
+- PostgreSQL database: Neon
+Installation
+- drizzle-orm and @neondatabase/serverless
+- drizzle-kit as a development dependency
+```bash
+npm i drizzle-orm @neondatabase/serverless
+npm i -D drizzle-kit
+```
+Problem where an older version of react was needed
+```bash
+npm install drizzle-orm @neondatabase/serverless --legacy-peer-deps
+```
+- The --legacy-peer-deps option tells npm to use a more lenient peer dependency resolution algorithm (older, npm v6 instead of npm v7) 
+for resolving peer dependencies, which can often resolve conflicts react version peer dependency conflicts.
+For .env.local
+```bash
+npm install dotenv
+```
+Use process.env.NEXT_PUBLIC_DATABASE_URL so you do not expose your url. To expose, export.
+After all installations, running
+```npm run db:push```
+will give ```[✓] Changes applied``` if it works
+To run app
+```npm run db:studio```
+
+
+## npm vs pip
+- npm install will create a folder node_modules and install dependencies there
+- pip install will install python packages (using uv is good cause u can have a particular python version and its packages)
+
