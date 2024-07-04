@@ -21,12 +21,23 @@ npx shadcn-ui@latest add button
 ```
 - text-primary configured at tailwind.config.js
 - Icons: lucide-react is installed with shadcn
+to install dialogue component
+```bash
+npx shadcn-ui@latest add dialog
+```
+- button
+- dialog
+- input
+- sonner
 
 ## Fonts: Import from Google Fonts
 to import the font "Inter", in layout.js
 ```jsx
 import { Inter } from "next/font/google";
 ```
+
+## Emoji: Import from https://www.npmjs.com/package/emoji-picker-react
+note: emoji picker is only workable in client
 
 ## VsCode extensions: 
 - PostCSS Language Support
