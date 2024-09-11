@@ -1,7 +1,7 @@
 'use client' //for usePathname
 
 import { UserButton } from '@clerk/nextjs'
-import { LayoutGrid, PiggyBank, ReceiptText, ShieldCheck } from 'lucide-react'
+import { LayoutGrid, MapPin, PiggyBank, ReceiptText, ShieldCheck } from 'lucide-react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'; //to read the current url's path name
@@ -34,6 +34,12 @@ function SideNav() {
       icon: ShieldCheck,
       path: '/dashboard/upgrade'
     },
+    {
+      id:5,
+      name: 'MapBox',
+      icon: MapPin,
+      path: '/dashboard/mapbox'
+    }, //testing maps
   ]
 
   //const [clientPath, setClientPath] = useState('');

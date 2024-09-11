@@ -17,7 +17,7 @@ function Header() {
         height = {100}
         ></Image>
         {isSignedIn?
-            <UserButton></UserButton>:
+            <UserButton>hi</UserButton>:
             <Link href = {'/sign-in'}>
                 <Button>Get Started</Button>
             </Link>

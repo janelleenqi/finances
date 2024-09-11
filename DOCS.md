@@ -96,6 +96,7 @@ Components that requires useEffect only works in a Client Component. So its pare
 ```js
 "use client"
 ```
+- useEffect
 
 ### components
 <div></div> vs <UserButton/>
